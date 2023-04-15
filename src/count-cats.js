@@ -13,11 +13,16 @@ const { NotImplementedError } = require('../extensions/index.js');
  *  ['^^', 1, 2]
  * ]) => 3`
  *
+ * 
  */
-function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+
+function countCats(matrix) {
+
+
+	return matrix.flat(Infinity).reduce((sum, item) => item === '^^' ? ++sum : sum, 0)
 }
+
+
 
 module.exports = {
   countCats
